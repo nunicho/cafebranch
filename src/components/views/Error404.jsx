@@ -1,10 +1,11 @@
 import React from 'react';
+// import '../App.css'
 
 const Error404 = () => {
     return (
-        <div>
+        <section className="mainSection">
             <h1>Página Error 404</h1>
-        </div>
+        </section>
     );
 };
 
