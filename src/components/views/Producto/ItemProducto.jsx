@@ -2,17 +2,18 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 
-const ItemProducto = () => {
+const ItemProducto = ({producto}) => {
     return (
         <tr>
-          <td>1</td>
-          <td>Brownie</td>
-          <td>$450</td>
-          <td>https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1</td>
-          <td>Dulce</td>
+            {/* <td>{props.producto.id}</td>*/}
+          <td>{producto.id}</td>
+          <td>{producto.nombreProducto}</td>
+          <td>${producto.precio}</td>
+          <td>{producto.imagen}</td>
+          <td>{producto.categoria}</td>
           <td>
-            <Button variant="warning">Editar</Button>{' '}
-            <Button variant="danger">Borrar</Button>{' '}
+            <Button variant="warning">Editar</Button>
+            <Button variant="danger">Borrar</Button>
           </td>
         </tr>
     );

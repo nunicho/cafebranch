@@ -27,8 +27,11 @@ return (
        <Form.Group className="mb-3">
         <Form.Label>Categoría</Form.Label>
         <Form.Select>
-          <option>Dulce</option>
-          <option>Salado</option>
+           <option value="">Seleccione una opcion</option>
+            <option value="bebida-caliente">Bebida caliente</option>
+            <option value="bebida-fria">Bebida fria</option>
+            <option value="dulce">Dulce</option>
+            <option value="salado">Salado</option>
         </Form.Select>
       </Form.Group>
       <Button variant="primary" type="submit">

@@ -8,18 +8,27 @@ import {Link, NavLink} from 'react-router-dom'
 
 const Menu = () => {
     return (
- <>
-      <Navbar bg="danger" variant="dark">
-        <Container>
-          <Navbar.Brand as={Link} to='/'>Café Branch</Navbar.Brand>
+ 
+    <Navbar bg="danger" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          Cafe Branch
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink  className="nav-item nav-link" to='/'>Inicio</NavLink>
-            <NavLink className="nav-item nav-link" to='/administrador' >Administrar</NavLink>
+            <NavLink className="nav-item nav-link" to="/">
+              Inicio
+            </NavLink>
+            <NavLink className="nav-item nav-link" to="/administrador">
+              Administrar
+            </NavLink>
           </Nav>
-        </Container>
-      </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
      
-    </>
+    
     );
 };
 
