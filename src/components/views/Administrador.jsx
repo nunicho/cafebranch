@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
-import { Button } from 'react-bootstrap';
 import { consultarAPI } from '../helpers/queries';
 import ItemProducto from './Producto/ItemProducto';
+import {Link} from 'react-router-dom'
 
 
 
@@ -33,7 +33,7 @@ return (
     <div className="container">
         <div className="d-flex justify-content-between my-3">
             <h2>Productos Disponibles</h2>
-             <Button variant="primary">Agregar</Button>{' '} 
+            <Link className="btn btn-primary" to="/administrar/crear">Agregar</Link>            
         </div>
     <Table striped bordered hover>          
       <thead>                
