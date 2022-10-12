@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+ import './App.css'
 import Inicio from './components/views/Inicio'
 import Administrador from './components/views/Administrador'
 import Error404 from './components/views/Error404'
@@ -9,6 +10,8 @@ import DetalleProducto from './components/views/DetalleProducto'
 import ItemProducto from './components/views/Producto/ItemProducto'
 import CrearProducto from './components/views/Producto/CrearProducto'
 import EditarProducto from './components/views/Producto/EditarProducto'
+import Login from './components/views/Login'
+import Registrar from './components/views/Registrar'
 
 
 
@@ -25,7 +28,9 @@ function App() {
     <Route exact path='/DetalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
     <Route exact path='/ItemProducto' element={<ItemProducto></ItemProducto>}></Route>
     <Route exact path='/administrar/crear' element={<CrearProducto></CrearProducto>}></Route>
-    <Route exact path='/administrar/editar/:id  ' element={<EditarProducto></EditarProducto>}></Route>
+    <Route exact path='/administrar/editar' element={<EditarProducto></EditarProducto>}></Route>
+    <Route exact path='/login' element={<Login></Login>}></Route>
+    <Route exact path='/registrar' element={<Registrar></Registrar>}></Route>
     <Route  path='*' element={<Error404></Error404>}></Route>
   </Routes>
  <Footer></Footer>

@@ -85,7 +85,8 @@ return (
        <Form.Group className="mb-3">
 
         <Form.Label>Categoría</Form.Label>
-        <Form.Select {...register ('categoria', {
+        <Form.Select 
+        {...register ('categoria', {
           required:'Debe seleccionar una categoría'
         })}>
            <option value="">Seleccione una opcion</option>

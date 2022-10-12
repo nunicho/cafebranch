@@ -39,3 +39,21 @@ export const creaProductoAPI = async(producto) =>{
         console.log(error)
     }
 }
+
+
+export const editarProductoAPI = async(producto) =>{
+    try{
+        const respuesta = await fetch (URL, {
+            method: "PUT", 
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(producto)
+        });
+        const listaProductos = await respuesta.json();
+        // console.log(listaProductos)
+        return listaProductos
+    }catch(error){
+        console.log(error)
+    }
+}
