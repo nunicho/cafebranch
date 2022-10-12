@@ -2,9 +2,25 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useForm } from 'react-hook-form';
 
 const EditarProducto = () => {
-return (
+const {register, handleSubmit, formState:{errors}} = useForm( 
+  {defaultValues: {
+    nombreProducto: "",
+    precio: 1,
+    imagen: '',
+    categoría:   ''
+  }});
+
+const onSubmit = (datos) =>{
+  console.log(datos)
+  console.log('desde nuestra función submit')
+}
+
+
+
+  return (
     <div className="container">
         <div>
             <h2>Editar Producto</h2>
@@ -15,6 +31,7 @@ return (
       <Form.Group className="mb-3" controlId="editarNombreProducto">
         <Form.Label>Nombre Producto</Form.Label>
         <Form.Control type="text" placeholder="Ej. Café" />
+        <Form.Text className="text-danger">{errors.nombreProducto?.message}</Form.Text>
        </Form.Group>
        <Form.Group className="mb-3" controlId="editarPrecio">
         <Form.Label>Precio</Form.Label>
