@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
+import { useNavigate} from "react-router-dom"
 
 const CrearProducto = () => {
 
@@ -14,9 +16,25 @@ const {register, handleSubmit, formState:{errors}} = useForm(
     categoría:   ''
   }});
 
+// inicializar la navegación
+const navegacion = useNavigate();
+
 const onSubmit = (datos) =>{
+  // los datos ya están validados
   console.log(datos)
-  console.log('desde nuestra función submit')
+  // enviar los datos a la api
+  crearProductoAPI(datos).then((respuesta)=>{
+    if(respuesta.status === 201){
+      // el producto se creó
+      Swal.fire('Producto creado', 'El producto fue creado correctamente', 'success')
+      reset();
+      navegacion ('/administrador');
+    }else{
+      //mostrar 
+      Swal.fire('Producto creado', 'Vuelva a intentar nuevamente', 'error')
+    }
+    
+  })
 }
 
 

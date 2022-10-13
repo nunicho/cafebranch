@@ -1,26 +1,32 @@
 {
-    "productos":[
-        {
-            "nombreProducto":"café",
-            "precio": 300,
-            "categoria":"bebida caliente",
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "id":1
-        },
-        {
-            "nombreProducto":"brownie",
-            "precio": 250,
-            "categoria":"dulce",
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "id":2
-        },
-        {
-            "nombreProducto":"licuado",
-            "precio": 350,
-            "categoria":"bebida fria",
-            "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "id":3
-
-        }
-    ]
+  "productos": [
+    {
+      "nombreProducto": "café",
+      "precio": 300,
+      "categoria": "bebida caliente",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 1
+    },
+    {
+      "nombreProducto": "licuado",
+      "precio": 350,
+      "categoria": "bebida fria",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 3
+    },
+    {
+      "nombreProducto": "té",
+      "precio": 300,
+      "categoria": "bebida caliente",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 4
+    },
+    {
+      "nombreProducto": "sandwich",
+      "precio": 300,
+      "categoria": "bebida caliente",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 5
+    }
+  ]
 }
