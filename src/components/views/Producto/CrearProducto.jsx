@@ -8,7 +8,7 @@ import { useNavigate} from "react-router-dom"
 
 const CrearProducto = () => {
 
-const {register, handleSubmit, formState:{errors}} = useForm( 
+const {register, handleSubmit, formState:{errors}, reset} = useForm( 
   {defaultValues: {
     nombreProducto: "",
     precio: 1,
