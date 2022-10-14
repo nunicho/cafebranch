@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
+import { creaProductoAPI } from "../../helpers/queries";
 import { useNavigate} from "react-router-dom"
 
 const CrearProducto = () => {
@@ -23,7 +24,7 @@ const onSubmit = (datos) =>{
   // los datos ya están validados
   console.log(datos)
   // enviar los datos a la api
-  crearProductoAPI(datos).then((respuesta)=>{
+  creaProductoAPI(datos).then((respuesta)=>{
     if(respuesta.status === 201){
       // el producto se creó
       Swal.fire('Producto creado', 'El producto fue creado correctamente', 'success')

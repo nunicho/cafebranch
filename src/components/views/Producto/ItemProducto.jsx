@@ -2,10 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import { consultarAPI } from '../../helpers/queries';
+import {borrarProductoAPI, consultarAPI } from '../../helpers/queries';
+import { Link } from 'react-router-dom';
 
 const ItemProducto = ({producto, setProductos}) => {
-const borrarProductoAPI = () =>{
+const borrarProducto = () =>{
 Swal.fire({
   title: '¿Estás seguro? de eliminar el producto',
   text: "No se puede revertir este paso",
@@ -23,7 +24,7 @@ Swal.fire({
         // actualizar el state productos o la tabla
       consultarAPI().then((respuesta)=>{
         console.log(respuesta)
-        setProducto(respuesta)
+        setProductos(respuesta)
       })
       Swal.fire(
       'Producto borrado!',
@@ -31,10 +32,11 @@ Swal.fire({
       'success'
     )
       } else {
+        Swal.fire(
       'Se produjo un error',
       'Pruebe hacer esta operación más tarde',
       'success'
-      }
+     )}
     })
   
   }
@@ -51,7 +53,7 @@ Swal.fire({
           <td>{producto.imagen}</td>
           <td>{producto.categoria}</td>
           <td>
-            <Button variant="warning">Editar</Button>
+            <Link className="btn btn-warning" to={`./administrar/editar/${producto.id}`}>Editar</Link>
             <Button variant="danger" onClick={borrarProducto}>Borrar</Button>
           </td>
         </tr>
