@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
 import { consultarAPI } from '../helpers/queries';
 import ItemProducto from './Producto/ItemProducto';
-import {Link} from 'react-router-dom'
-
-
+import {Link} from 'react-router-dom';
 
 const Administrador = () => {
 const [productos, setProductos]=useState([])

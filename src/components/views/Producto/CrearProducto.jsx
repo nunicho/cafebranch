@@ -93,7 +93,7 @@ return (
         {...register('imagen',{
           required:'La URL  de la imagen es obligatoria',
           pattern:{
-              value: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
+              value: /^https?:\/\/[\w]+(\.[\w]+)+[/#?]?.*$/,
               message:'Debe ingresar una URL válida'
           },
         })}
