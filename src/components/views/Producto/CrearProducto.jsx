@@ -32,7 +32,7 @@ const onSubmit = (datos) =>{
       navegacion ('/administrador');
     }else{
       //mostrar 
-      Swal.fire('Producto creado', 'Vuelva a intentar nuevamente', 'error')
+      Swal.fire('Producto no creado', 'Vuelva a intentar nuevamente', 'error')
     }
     
   })

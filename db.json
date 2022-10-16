@@ -28,6 +28,44 @@
       "categoría": "",
       "categoria": "dulce",
       "id": 6
+    },
+    {
+      "nombreProducto": "Tostadito",
+      "precio": "700",
+      "imagen": "https://cdn.pixabay.com/photo/2016/11/29/04/00/bread-1867208_960_720.jpg",
+      "categoría": "",
+      "categoria": "salado",
+      "id": 7
+    }
+  ],
+  "usuarios": [
+    {
+      "nombre": "Luis",
+      "apellido": "Pérez",
+      "mail": "perezluis81@gmail.com",
+      "password": "$Qpañzm1980",
+      "id": 1
+    },
+    {
+      "nombre": "Pedro",
+      "apellido": "González",
+      "mail": "gonzalezpedro60@gmail.com",
+      "password": "$Qpañzm1960",
+      "id": 2
+    },
+    {
+      "nombre": "Mauricio",
+      "apellido": "Alonso",
+      "mail": "conta.alonso@gmail.com",
+      "password": "1981AlonSo$",
+      "id": 3
+    },
+    {
+      "nombre": "Bautista",
+      "apellido": "Alonso",
+      "mail": "buatitomalonso@gmail.com",
+      "password": "$Wjgskdg893",
+      "id": 4
     }
   ]
 }

@@ -4,7 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from 'react-hook-form';
 import {useState} from "react"
-
+import { creaUsuarioAPI } from "../helpers/queries";
+import Swal from 'sweetalert2';
+import { useNavigate} from "react-router-dom"
 
 function Registrar() {
 
@@ -19,7 +21,7 @@ const [passwordShown, setPasswordShown] = useState(false);
   };
 
 
-const {register, handleSubmit, formState:{errors}} = useForm( 
+const {register, handleSubmit, formState:{errors}, reset} = useForm( 
   {defaultValues: {
     nombre:"",
     apellido:"",
@@ -27,9 +29,24 @@ const {register, handleSubmit, formState:{errors}} = useForm(
     password: "",
   }});
 
+  // inicializar la navegación
+const navegacion = useNavigate();
+
 const onSubmit = (datos) =>{
   console.log(datos)
   console.log('desde nuestra función submit')
+ creaUsuarioAPI(datos).then((respuesta)=>{
+    if(respuesta.status === 201){
+      // el producto se creó
+      Swal.fire('Uruario creado', 'El usuario fue creado correctamente', 'success')
+      reset();
+      navegacion ('/Registrar');
+    }else{
+      //mostrar 
+      Swal.fire('Usuario no creado', 'Vuelva a intentar nuevamente', 'error')
+    }
+    
+  })
 }
 
 
