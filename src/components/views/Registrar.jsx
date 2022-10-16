@@ -38,7 +38,7 @@ const onSubmit = (datos) =>{
  creaUsuarioAPI(datos).then((respuesta)=>{
     if(respuesta.status === 201){
       // el producto se creó
-      Swal.fire('Uruario creado', 'El usuario fue creado correctamente', 'success')
+      Swal.fire('Usuario creado', 'El usuario fue creado correctamente', 'success')
       reset();
       navegacion ('/Registrar');
     }else{
