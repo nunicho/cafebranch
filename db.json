@@ -36,6 +36,14 @@
       "categoría": "",
       "categoria": "salado",
       "id": 7
+    },
+    {
+      "nombreProducto": "Combo desayuno",
+      "precio": "50",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoría": "",
+      "categoria": "dulce",
+      "id": 8
     }
   ],
   "usuarios": [
@@ -73,6 +81,27 @@
       "mail": "pandepon@gmail.com",
       "password": "#$ertTgjfkg2",
       "id": 5
+    },
+    {
+      "nombre": "Cintia",
+      "apellido": "Nagy",
+      "mail": "cintianagy@gmail.com",
+      "password": "%$ewrt98SDF",
+      "id": 6
+    },
+    {
+      "nombre": "Tom",
+      "apellido": "Cruise",
+      "mail": "tomcruise@gmail.com",
+      "password": "234$mnsksfE",
+      "id": 7
+    },
+    {
+      "nombre": "Brad ",
+      "apellido": "Pitt",
+      "mail": "bradpitt@gmal.com",
+      "password": "dsfsf$%pI0",
+      "id": 8
     }
   ]
 }
