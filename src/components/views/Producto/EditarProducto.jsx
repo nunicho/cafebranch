@@ -1,22 +1,56 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { useForm } from 'react-hook-form';
+  import { useEffect } from "react";
+  import { Form, Button } from "react-bootstrap";
+  import { useParams, useNavigate } from "react-router-dom";
+  import { editarProductoAPI, obtenerProductoAPI } from "../../helpers/queries";
+  import { useForm } from "react-hook-form";
+  import Swal from "sweetalert2";
 
 const EditarProducto = () => {
-const {register, handleSubmit, formState:{errors}} = useForm( 
-  {defaultValues: {
-    nombreProducto: "",
-    precio: 1,
-    imagen: '',
-    categoría:   ''
-  }});
+  //traer el parametro de la ruta
+  const {id} = useParams();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue
+  } = useForm({
+    defaultValues: {
+      nombreProducto: "",
+      precio: 1,
+      imagen: "",
+      categoria: "",
+    },
+  });
+  const navegacion = useNavigate();
 
-const onSubmit = (datos) =>{
-  console.log(datos)
-  console.log('desde nuestra función submit')
-}
+  useEffect(()=>{
+    obtenerProductoAPI(id).then((respuesta)=>{
+      if(respuesta.status===200){
+        //cargar los datos de la repuesta en el formulario
+        setValue('nombreProducto', respuesta.dato.nombreProducto )
+        setValue('precio', respuesta.dato.precio )
+        setValue('categoria', respuesta.dato.categoria )
+        setValue('imagen', respuesta.dato.imagen )
+        console.log(respuesta)
+      }else{
+        Swal.fire('Ocurrio un error', 'Intente este paso en unos minutos', 'error')
+      }
+    })
+  },[])
+
+  const onSubmit = (producto) =>{
+    console.log(producto)
+    //aqui quiero enviar la peticion a la api para actualizar los datos del producto
+    editarProductoAPI(id,producto).then((respuesta)=>{
+      if(respuesta.status===200){
+        Swal.fire('Producto actualizado', 'el producto fue actualizado correctamente', 'success');
+        //redireccionar
+        navegacion('/administrador');
+      }else{
+        Swal.fire('Ocurrio un error', 'Intente este paso en unos minutos', 'error')
+      }
+    })
+  }
 
 
 
@@ -71,7 +105,7 @@ const onSubmit = (datos) =>{
         {...register('imagen',{
           required:'La URL  de la imagen es obligatoria',
           pattern:{
-              value: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
+              value: /^https?:\/\/[\w]+(\.[\w]+)+[/#?]?.*$/,
               message:'Debe ingresar una URL válida'
           },
         })}

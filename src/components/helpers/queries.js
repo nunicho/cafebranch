@@ -55,11 +55,29 @@ export const obtenerProductoAPI = async(id) =>{
     try{
 
         const respuesta = await fetch (URL+'/'+id);
-        const productoBuscado = await respuesta.json();
-        // console.log(listaProductos)
-        return productoBuscado
+        const productoBuscado = {
+            dato: await respuesta.json(),
+            status: respuesta.status
+        }
+       return productoBuscado
     }catch(error){
         console.log(error)
+    }
+}
+
+
+export const editarProductoAPI = async(id, datosActualizados)=>{
+    try{
+        const respuesta = await fetch(URL+'/'+id,{
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datosActualizados)
+        });
+        return respuesta;
+    }catch(error){
+        console.log(error);
     }
 }
 
