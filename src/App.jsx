@@ -25,7 +25,7 @@ function App() {
     {/* <Route exact path='/Footer' element={<Footer></Footer>}></Route> */}
     {/* <Route exact path='/Menu' element={<Menu></Menu>}></Route> */}
     <Route exact path='/CardProducto' element={<CardProducto></CardProducto>}></Route>
-    <Route exact path='/DetalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
+    <Route exact path='/DetalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
     <Route exact path='/ItemProducto' element={<ItemProducto></ItemProducto>}></Route>
     <Route exact path='/administrar/crear' element={<CrearProducto></CrearProducto>}></Route>
     <Route exact path='/administrar/editar/:id' element={<EditarProducto></EditarProducto>}></Route>
