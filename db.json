@@ -3,8 +3,8 @@
     {
       "nombreProducto": "café",
       "precio": 300,
-      "categoria": "bebida caliente",
       "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "bebida-caliente",
       "id": 1
     },
     {
@@ -95,6 +95,13 @@
       "mail": "bradpitt@gmal.com",
       "password": "dsfsf$%pI0",
       "id": 8
+    },
+    {
+      "nombre": "pepe",
+      "apellido": "pepe",
+      "mail": "pepe@gmail.com",
+      "password": "$Q1qwert",
+      "id": 9
     }
   ]
 }

@@ -53,7 +53,6 @@ export const borrarProductoAPI = async(id) =>{
 
 export const obtenerProductoAPI = async(id) =>{
     try{
-
         const respuesta = await fetch (URL+'/'+id);
         const productoBuscado = {
             dato: await respuesta.json(),
@@ -133,14 +132,17 @@ export const borrarUsuarioAPI = async(id) =>{
 }
 
 
-export const obtenerUsuarioAPI = async(id) =>{
+export const obtenerUsuarioAPI = async(mail) =>{
     try{
 
-        const respuestaUsuarios = await fetch (URLusuarios+'/'+id);
-        const usuarioBuscado = await respuestaUsuarios.json();
-        // console.log(listaUsuarios)
+        const respuestaUsuarios = await fetch (URLusuarios+'/'+mail);
+        const usuarioBuscado = {
+        dato: await respuestaUsuarios.json(),
+        status: respuestaUsuarios.status
+        }
         return usuarioBuscado
     }catch(error){
         console.log(error)
     }
 }
+

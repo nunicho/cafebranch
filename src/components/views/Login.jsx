@@ -3,7 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm } from 'react-hook-form';
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import { useParams} from "react-router-dom";
+
+
+import { obtenerUsuarioAPI} from "../helpers/queries";
+import Swal from 'sweetalert2';
 
 
 function Login() {
@@ -25,10 +30,27 @@ const {register, handleSubmit, formState:{errors}} = useForm(
     password: "",
   }});
 
+
+//CONSULTA A LA API SI EXISTE EL USUARIO
 const onSubmit = (datos) =>{
   console.log(datos)
   console.log('desde nuestra función submit')
-}
+    obtenerUsuarioAPI(datos.mail, datos.password).then((respuestaUsuarios)=>{
+      console.log(datos.mail)
+      console.log(datos.password)
+      console.log(respuestaUsuarios)
+      if(respuestaUsuarios.status===200){
+        //cargar los datos de la repuesta en el formulario
+        // Swal.fire('Bienvenido Usuario', 'Usuario existente', 'success')   
+        console.log("correcto")
+        
+      }else{
+        // Swal.fire('El usuario no existe', 'Verifique usuario y/o contraseña', 'error')
+        console.log("INcorrecto")
+      }
+    })
+  }
+
 
 
 
