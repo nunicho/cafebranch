@@ -123,8 +123,8 @@ const EditarProducto = () => {
             <option value="bebida-fria">Bebida fria</option>
             <option value="dulce">Dulce</option>
             <option value="salado">Salado</option>
+       </Form.Select>
         <Form.Text className="text-danger">{errors.categoria?.message}</Form.Text>
-        </Form.Select>
       </Form.Group>
       <Button variant="primary" type="submit">
        Guardar

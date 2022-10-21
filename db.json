@@ -10,8 +10,8 @@
     {
       "nombreProducto": "té",
       "precio": 300,
-      "categoria": "bebida caliente",
       "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "bebida-fria",
       "id": 4
     },
     {
@@ -26,15 +26,13 @@
       "nombreProducto": "Tostadito",
       "precio": "700",
       "imagen": "https://cdn.pixabay.com/photo/2016/11/29/04/00/bread-1867208_960_720.jpg",
-      "categoría": "",
       "categoria": "salado",
       "id": 7
     },
     {
       "nombreProducto": "Combo desayuno",
-      "precio": "50",
+      "precio": "70",
       "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoría": "",
       "categoria": "dulce",
       "id": 8
     }
