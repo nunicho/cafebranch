@@ -33,9 +33,9 @@ const {register, handleSubmit, formState:{errors}} = useForm(
 
 //CONSULTA A LA API SI EXISTE EL USUARIO
 const onSubmit = (datos) =>{
-  console.log(datos)
+  // console.log(datos)
   console.log('desde nuestra función submit')
-    obtenerUsuarioAPI(datos.mail, datos.password).then((respuestaUsuarios)=>{
+    obtenerUsuarioAPI(datos.mail).then((respuestaUsuarios)=>{
       console.log(datos.mail)
       console.log(datos.password)
       console.log(respuestaUsuarios)
