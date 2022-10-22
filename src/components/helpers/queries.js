@@ -132,10 +132,10 @@ export const borrarUsuarioAPI = async(id) =>{
 }
 
 
-export const obtenerUsuarioAPI = async(datos) =>{
+export const obtenerUsuarioAPI = async(mail) =>{
     try{
 
-        const respuestaUsuarios = await fetch (URLusuarios+'/'+datos);
+        const respuestaUsuarios = await fetch (URLusuarios+'/');
         const usuarioBuscado = {
         dato: await respuestaUsuarios.json(),
         status: respuestaUsuarios.status
