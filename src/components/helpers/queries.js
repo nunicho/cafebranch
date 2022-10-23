@@ -88,11 +88,9 @@ const URLusuarios = 'http://localhost:3004/usuarios';
 // petición DELETE, petición para borrar
 // petición PUT, petición que pide modificar un usuario
 
-// peticion GET que trae todos los usuarios
-
 
 // petición GET que trae todos los productos
-export const consultarUsuarioAPI = async() =>{
+export const consultarUsuarioAPI = async(data) =>{
     try{
 
         const respuestaUsuarios = await fetch (URLusuarios);
