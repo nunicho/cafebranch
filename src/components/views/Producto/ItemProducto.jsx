@@ -19,7 +19,7 @@ Swal.fire({
 }).then((result) => {
   if (result.isConfirmed) {
     //realizar la consulta a la API
-    borrarProductoAPI(producto.id).then((respuesta)=>{
+    borrarProductoAPI(producto._id).then((respuesta)=>{
       if(respuesta.status === 200){
         // actualizar el state productos o la tabla
       consultarAPI().then((respuesta)=>{
@@ -46,14 +46,14 @@ Swal.fire({
   
   return (
         <tr>
-            {/* <td>{props.producto.id}</td>*/}
-          <td>{producto.id}</td>
+            {/* <td>{props.producto._id}</td>*/}
+          <td>{producto._id}</td>
           <td>{producto.nombreProducto}</td>
           <td>${producto.precio}</td>
           <td>{producto.imagen}</td>
           <td>{producto.categoria}</td>
           <td>
-            <Link className="btn btn-warning" to={`/administrar/editar/${producto.id}`}>Editar</Link>
+            <Link className="btn btn-warning" to={`/administrar/editar/${producto._id}`}>Editar</Link>
             <Button variant="danger" onClick={borrarProducto}>Borrar</Button>
           </td>
         </tr>

@@ -14,7 +14,7 @@ return (
         <Card.Title>{producto.nombreProducto}</Card.Title>
         <Card.Text className="my-3">${producto.precio}</Card.Text>
         <hr></hr>
-        <Link className="btn btn-danger" to={`/DetalleProducto/${producto.id}`}>Ver más</Link>
+        <Link className="btn btn-danger" to={`/DetalleProducto/${producto._id}`}>Ver más</Link>
       </Card.Body>
     </Card>
     

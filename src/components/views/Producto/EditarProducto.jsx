@@ -1,3 +1,4 @@
+  import 'bootstrap/dist/css/bootstrap.min.css';
   import { useEffect } from "react";
   import { Form, Button } from "react-bootstrap";
   import { useParams, useNavigate } from "react-router-dom";
@@ -12,8 +13,7 @@ const EditarProducto = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setValue
-  } = useForm({
+    setValue} = useForm({
     defaultValues: {
       nombreProducto: "",
       precio: 1,
@@ -64,7 +64,8 @@ const EditarProducto = () => {
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Form.Group className="mb-3" controlId="editarNombreProducto">
         <Form.Label>Nombre Producto</Form.Label>
-        <Form.Control type="text" 
+        <Form.Control 
+        type="text" 
         placeholder="Ej. Café"      
         {...register('nombreProducto', {
           required:'Este dato es obligatorio', 
@@ -119,8 +120,8 @@ const EditarProducto = () => {
           required:'Debe seleccionar una categoría',
           })}>
            <option value="">Seleccione una opcion</option>
-            <option value="bebida-caliente">Bebida caliente</option>
-            <option value="bebida-fria">Bebida fria</option>
+            <option value="bebida caliente">Bebida caliente</option>
+            <option value="bebida fria">Bebida fria</option>
             <option value="dulce">Dulce</option>
             <option value="salado">Salado</option>
        </Form.Select>
