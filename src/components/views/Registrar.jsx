@@ -139,8 +139,8 @@ const onSubmit = (datos) =>{
          {...register('password',{
           required:'Es obligatorio ingresar una password',
           pattern:{
-              value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-              message:'La contraseña debe tener entre 8 carateres y contener al menos: 1 minúscula, 1 mayúscula y 1 número o 1 caracter especial.'
+              value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8}$/,
+              message:'La contraseña debe tener 8 caracteres y contener al menos: 1 minúscula, 1 mayúscula y 1 número o 1 caracter especial.'
           },
         })}
         

@@ -1,7 +1,8 @@
 // archivo que nos sirva para hacer las consultas a la API (json-server)
 
 // const URL = 'http://localhost:3004/productos' // dirección de Json Server
-const URL = 'http://localhost:4000/apicafe/productos';
+const URL = process.env.REACT_APP_API_CAFE;
+console.log(URL);
 // tipos de peticiones 
 // petición GET que trae todos los productos o un producto  
 // petición POST, crear un producto, login 
